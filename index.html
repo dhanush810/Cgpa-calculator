@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            body{
+                background-color: rgb(70, 0, 128);
+                background-color:linear-gradient(to right,#0062E6,#33AEFF);
+                background:url("MonEYd5.JPG") no-repeat;
+            }
+            .container{
+                border-radius: 5px;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			max-width: 800px;
+            
+			margin: 0 auto;
+                background-color: rgb(136, 58, 232);
+            }
+            button[type="button"] {
+                background-color: #4CAF50;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 3px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .res {
+                margin-top: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+            }
+           form{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           }
+        </style>
+    </head>
+    <body>
+        <div id="conatiner" class="container mt-4 mb-4">
+            <h2 style="text-align: center;"><i>CGPA CALCULATOR</i></h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="cord">
+                        <div class="cord-body">
+                        <form class="form-group">
+                            <label for="Subject1" style="text-align: center;padding:2px;" ><b>Sub 1:</b></label>
+                            <input name="subject1" placeholder="Enter sub marks" type="number" id="sub1" class="form-control">
+                            <br>
+                            <label for="Subject2" style="text-align: center;padding:2px;"><b>Sub 2:</b></label>
+                            <input name="subject2" placeholder="Enter sub marks" type="number" id="sub2" class="form-control">
+                            <br>
+                            <label for="Subject3" style="text-align: center;padding:2px;"><b>Sub 3:</b></label>
+                            <input name="subject3" placeholder="Enter sub marks" type="number" id="sub3" class="form-control">
+                            <br>
+                            <label for="Subject4" style="text-align: center;padding:2px;"><b>Sub 4:</b></label>
+                            <input name="subject4" placeholder="Enter sub marks" type="number" id="sub4" class="form-control">
+                            <br>
+                            <label for="Subject5" style="text-align: center;padding:2px;"><b>Sub 5:</b></label>
+                            <input name="subject5" placeholder="Enter sub marks" type="number" id="sub5" class="form-control">
+                            <br>
+                            <label for="Subject6" style="text-align: center;padding:2px;"><b>Sub 6:</b></label>
+                            <input name="subject6" placeholder="Enter sub marks" type="number" id="sub6" class="form-control">
+                        </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="cord">
+                        <div class="cord-body">
+                            <form class="form-group">
+                                <label for="credi1" style="text-align: center;padding:2px;"><b>cred 1:</b></label>
+                                <input name="credi1" placeholder="Enter sub marks" type="number" id="cred1" class="form-control">
+                                <br>
+                                <label for="credi2" style="text-align: center;padding:2px;"><b>cred 2:</b></label>
+                                <input name="credi2" placeholder="Enter sub marks" type="number" id="cred2" class="form-control">
+                                <br>
+                                <label for="credi3" style="text-align: center;padding:2px;"><b>cred 3:</b></label>
+                                <input name="credi3" placeholder="Enter sub marks" type="number" id="cred3" class="form-control">
+                                <br>
+                                <label for="credi4" style="text-align: center;padding:2px;"><b>cred 4:</b></label>
+                                <input name="credi4" placeholder="Enter sub marks" type="number" id="cred4" class="form-control">
+                                <br>
+                                <label for="credi5" style="text-align: center;padding:2px;"><b>cred 5:</b></label>
+                                <input name="credi5" placeholder="Enter sub marks" type="number" id="cred5" class="form-control">
+                                <br>
+                                <label for="credi6" style="text-align: center;padding:2px;"><b>cred 6:</b></label>
+                                <input name="credi6" placeholder="Enter sub marks" type="number" id="cred6" class="form-control">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="button" onclick="myfunction()" > submit</button>
+            <br><br>
+            <p class="res"> Your result: <span id="res"></span></p>
+        </div>
+        
+        <script>
+            function myfunction(){
+                //fetching marks 
+                var mark1=document.getElementById("sub1").value;
+                var mark2=document.getElementById("sub2").value;
+                var mark3=document.getElementById("sub3").value;
+                var mark4=document.getElementById("sub4").value;
+                var mark5=document.getElementById("sub5").value;
+                var mark6=document.getElementById("sub6").value;
+                //fetching credits
+                var credit1=document.getElementById("cred1").value;
+                var credit2=document.getElementById("cred2").value;
+                var credit3=document.getElementById("cred3").value;
+                var credit4=document.getElementById("cred4").value;
+                var credit5=document.getElementById("cred5").value;
+                var credit6=document.getElementById("cred6").value;
+                //calculation
+                var marks=[];
+                marks.push(sub1);
+                marks.push(sub2);
+                marks.push(sub3);
+                marks.push(sub4);
+                marks.push(sub5);
+                marks.push(sub6);
+                var credits=[];
+                credits.push(credit1);
+                credits.push(credit2);
+                credits.push(credit3);
+                credits.push(credit4);
+                credits.push(credit5);
+                credits.push(credit6);
+                var tcred=0;
+                var digit=0;
+                for(var i=0;i<6;i++){
+                    tcred+=credits[i];
+                }
+                for(var i=0;i<6;i++){
+                    digit+=(marks[i]*credits[i])/tcred;
+                }
+                
+                document.getElementById("res").innerHTML=digit;
+            }
+       
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
