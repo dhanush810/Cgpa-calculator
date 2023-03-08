@@ -116,13 +116,13 @@
                 var credit5=document.getElementById("cred5").value;
                 var credit6=document.getElementById("cred6").value;
                 //calculation
-                var marks=[];
-                marks.push(sub1);
-                marks.push(sub2);
-                marks.push(sub3);
-                marks.push(sub4);
-                marks.push(sub5);
-                marks.push(sub6);
+             var marks=[];
+                marks.push(mark1);
+                marks.push(mark2);
+                marks.push(mark3);
+                marks.push(mark4);
+                marks.push(mark5);
+                marks.push(mark6);
                 var credits=[];
                 credits.push(credit1);
                 credits.push(credit2);
@@ -130,16 +130,15 @@
                 credits.push(credit4);
                 credits.push(credit5);
                 credits.push(credit6);
-                var tcred=0;
-                var digit=0;
-                for(var i=0;i<6;i++){
-                    tcred+=credits[i];
+                tcred=Number(credit1)+Number(credit2)+Number(credit3)+Number(credit4)+Number(credit5)+Number(credit6);
+                var sum=0;
+                for(let i=0;i<6;i++){
+                    var digit=(Number(marks[i]))*(Number(credits[i]));
+                    var cnt=digit/tcred;
+                    sum+=cnt;
                 }
-                for(var i=0;i<6;i++){
-                    digit+=(marks[i]*credits[i])/tcred;
-                }
-                
-                document.getElementById("res").innerHTML=digit;
+                var total=sum;
+                document.getElementById("res").innerHTML=sum;
             }
        
         </script>
